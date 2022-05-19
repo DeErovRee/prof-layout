@@ -43,6 +43,18 @@ $margin: 32px;
             &_item {
                 margin-left: 33px;
                 cursor: pointer;
+                position: relative;
+
+                .circle {
+                    border: 1px solid #F16D7F;
+                    width: 19px;
+                    border-radius: 19px;
+                    height: 19px;
+                    position: absolute;
+                    background: #F16D7F;
+                    right: -9.5px;
+                    top: -9.5px;
+                }
             }
         }
     }
