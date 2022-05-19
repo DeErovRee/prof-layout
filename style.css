@@ -69,6 +69,7 @@ header .menu_right_item {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 56px;
 }
 
 .top_bottom .poster_left {
