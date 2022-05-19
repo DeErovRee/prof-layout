@@ -58,6 +58,8 @@
 }
 
 .top .menu_right_item .circle {
+  color: #ffffff;
+  text-align: center;
   border: 1px solid #F16D7F;
   width: 19px;
   border-radius: 19px;
