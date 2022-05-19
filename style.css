@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -10,11 +11,11 @@
   padding-right: 32px;
 }
 
-header {
+.top {
   background-color: #222222;
 }
 
-header .menu {
+.top .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +26,7 @@ header .menu {
   padding-bottom: 20px;
 }
 
-header .menu_left {
+.top .menu_left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,12 +36,12 @@ header .menu_left {
   list-style-type: none;
 }
 
-header .menu_left_item {
+.top .menu_left_item {
   margin-right: 41px;
   cursor: pointer;
 }
 
-header .menu_right {
+.top .menu_right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,7 +51,7 @@ header .menu_right {
   list-style-type: none;
 }
 
-header .menu_right_item {
+.top .menu_right_item {
   margin-left: 33px;
   cursor: pointer;
 }
@@ -69,7 +70,6 @@ header .menu_right_item {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 56px;
 }
 
 .top_bottom .poster_left {
@@ -326,6 +326,12 @@ header .menu_right_item {
 
 .bottom {
   background: #222224;
+}
+
+.bottom ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .bottom .benefits {
@@ -685,6 +691,11 @@ header .menu_right_item {
 }
 
 .text_p_subs-and-prom {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
   width: 356px;
   text-align: center;
 }
