@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-=======
->>>>>>> 89aa3eb9478716d7219306c13b48f5f21d181b1b
 * {
   padding: 0;
   margin: 0;
@@ -331,15 +328,12 @@
   background: #222224;
 }
 
-<<<<<<< HEAD
 .bottom ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-=======
->>>>>>> 89aa3eb9478716d7219306c13b48f5f21d181b1b
 .bottom .benefits {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -697,14 +691,11 @@
 }
 
 .text_p_subs-and-prom {
-<<<<<<< HEAD
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-=======
->>>>>>> 89aa3eb9478716d7219306c13b48f5f21d181b1b
   width: 356px;
   text-align: center;
 }
