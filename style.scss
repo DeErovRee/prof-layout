@@ -157,7 +157,6 @@ main {
                 &:first-child {
                     margin: 51px 25px 34px 0px;
                 }
-                
 
                 &-txt {
                     margin-right: 10px;
@@ -336,6 +335,7 @@ main {
         margin: 50px auto 0px;
 
         &_button {
+            color: #5d5d5d;
             background: #ffffff;
             width: 28.3px;
             border: none;
@@ -346,6 +346,10 @@ main {
                 border-top-left-radius: 5px;
                 border-bottom-left-radius: 5px;
                 border-left: 1px solid #EBEBEB;
+            }
+
+            &:nth-child(2) {
+                color: #EF5B70;
             }
 
             &:last-child {

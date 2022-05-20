@@ -418,6 +418,7 @@ main .page-changer {
 }
 
 main .page-changer_button {
+  color: #5d5d5d;
   background: #ffffff;
   width: 28.3px;
   border: none;
@@ -429,6 +430,10 @@ main .page-changer_button:first-child {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border-left: 1px solid #EBEBEB;
+}
+
+main .page-changer_button:nth-child(2) {
+  color: #EF5B70;
 }
 
 main .page-changer_button:last-child {
