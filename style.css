@@ -11,6 +11,13 @@
   padding-right: 32px;
 }
 
+a,
+a:active,
+a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
 .top {
   background-color: #222222;
 }
