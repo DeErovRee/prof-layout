@@ -542,6 +542,12 @@ main {
                 width: 360px;
                 background: #F8F8F8;
                 margin: 8px;
+                transition: 0.5s;
+
+                &:hover {
+                    transform: scale(1.05);
+                    z-index: 2;
+                }
 
                 img {
                     width: 100%;
@@ -1122,6 +1128,7 @@ main {
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+                transition: 1s;
                 
                 &:first-child {
                     margin-left: 0;
@@ -1129,6 +1136,7 @@ main {
 
                 &:hover {
                     background: #FF6A6A;
+                    transform: rotate(360deg);
                 }
             }
         }

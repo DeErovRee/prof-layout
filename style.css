@@ -622,6 +622,14 @@ main .fetured .card_items .card {
   width: 360px;
   background: #F8F8F8;
   margin: 8px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .fetured .card_items .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 2;
 }
 
 main .fetured .card_items .card img {
@@ -1335,6 +1343,8 @@ main .button .button_all-prod:hover {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .bottom .copy .copy_right .square:first-child {
@@ -1343,6 +1353,8 @@ main .button .button_all-prod:hover {
 
 .bottom .copy .copy_right .square:hover {
   background: #FF6A6A;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .color-text {
