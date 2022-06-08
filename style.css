@@ -879,6 +879,13 @@ main .cart .cart {
 }
 
 main .cart-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 57.2%;
 }
 
@@ -979,20 +986,6 @@ main .cart-product-options-btn {
 }
 
 main .cart-info {
-  width: 43.8%;
-}
-
-main .cart-info-pdata {
-  margin: 0 0 0 128px;
-}
-
-main .cart-info-pdata-title {
-  text-transform: uppercase;
-  margin: 20px 0;
-  color: #222222;
-}
-
-main .cart-info-pdata-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1002,14 +995,51 @@ main .cart-info-pdata-form {
           flex-direction: column;
 }
 
-main .cart-info-pdata-form input {
+main .cart-info-title {
+  text-transform: uppercase;
+  margin: 20px 0 20px 128px;
+  color: #222222;
+}
+
+main .cart-info-content-pdata {
+  margin: 0 0 0 128px;
+}
+
+main .cart-info-content-pdata-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .cart-info-content-pdata-form input {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding: 12.5px 16.5px 12.5px;
   border: 1px solid #a4a4a4;
 }
 
-main .cart-info-pdata-form button {
+main .cart-info-content-pdata-form input::-webkit-input-placeholder {
+  color: #a4a4a4;
+}
+
+main .cart-info-content-pdata-form input:-ms-input-placeholder {
+  color: #a4a4a4;
+}
+
+main .cart-info-content-pdata-form input::-ms-input-placeholder {
+  color: #a4a4a4;
+}
+
+main .cart-info-content-pdata-form input::placeholder {
+  color: #a4a4a4;
+}
+
+main .cart-info-content-pdata-form button {
+  color: #a4a4a4;
   text-transform: uppercase;
   margin-bottom: 20px;
   padding: 12.5px 16.5px 12.5px;
@@ -1019,13 +1049,14 @@ main .cart-info-pdata-form button {
   font-size: 11px;
 }
 
-main .cart-info-price {
+main .cart-info-content-price {
+  width: 360px;
   margin: 57px 0 0 128px;
   background-color: #F5F3F3;
   padding: 42px;
 }
 
-main .cart-info-price-sub {
+main .cart-info-content-price-sub {
   margin-bottom: 12px;
   text-align: right;
   text-transform: uppercase;
@@ -1035,7 +1066,7 @@ main .cart-info-price-sub {
   color: #222222;
 }
 
-main .cart-info-price-grand {
+main .cart-info-content-price-grand {
   margin-bottom: 21px;
   text-align: right;
   text-transform: uppercase;
@@ -1045,7 +1076,7 @@ main .cart-info-price-grand {
   color: #222222;
 }
 
-main .cart-info-price-checkout {
+main .cart-info-content-price-checkout {
   margin-top: 17px;
   background-color: #F16D7F;
   border: none;
@@ -1689,6 +1720,55 @@ main .button .button_all-prod:hover {
     padding-left: 32px;
     padding-right: 32px;
   }
+  main .registration {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  main .registration .registration-form {
+    margin-right: 11px;
+  }
+  main .registration .registration-info {
+    margin-left: 11px;
+  }
+  main .cart .cart {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .cart-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin-top: 64.5px;
+  }
+  main .cart-info-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .cart-info-content-pdata {
+    width: 50%;
+    margin: 0;
+  }
+  main .cart-info-content-price {
+    width: 50%;
+    margin: 0;
+  }
+  main .cart-product {
+    width: 100%;
+  }
+  main .cart-info-pdata {
+    margin: 0;
+    width: 50%;
+  }
+  main .cart-info-price {
+    margin: 0;
+  }
   main .categories_items_small .card_small_men {
     margin-left: 19px;
     margin-right: 19px;
@@ -1758,7 +1838,7 @@ main .button .button_all-prod:hover {
 }
 
 @media (max-width: 667px) {
-  .top .menu_right_item:nth-child(2n+1) {
+  .top .menu_right_item:nth-child(1n+2) {
     display: none;
   }
   .top .menu {
@@ -1773,6 +1853,15 @@ main .button .button_all-prod:hover {
   .top_bottom .poster_right {
     width: 100%;
     margin: 146px 40px;
+  }
+  main .registration {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .registration .registration-form {
+    margin-bottom: 40px;
   }
   main .categories_items_small {
     -webkit-box-orient: vertical;
