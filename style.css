@@ -5,7 +5,6 @@
 }
 
 .container {
-  width: 100%;
   max-width: 1140px;
   margin: 0 auto;
   padding-left: 32px;
@@ -1107,6 +1106,157 @@ main .page-changer_button:last-child {
 
 main .page-changer_button:hover {
   cursor: pointer;
+}
+
+main .registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .registration .registration-form {
+  margin: 0 60px 0 0;
+}
+
+main .registration .registration-form-pdata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Lato', sans-serif;
+}
+
+main .registration .registration-form-pdata-article {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+main .registration .registration-form-pdata-fname {
+  margin-bottom: 20px;
+}
+
+main .registration .registration-form-pdata-lname {
+  margin-bottom: 31px;
+}
+
+main .registration .registration-form-pdata input {
+  border: 1px solid #a4a4a4;
+  padding: 12.5px 16.5px 15.5px;
+  color: #B1B1B1;
+}
+
+main .registration .registration-form-pdata-gender {
+  margin-bottom: 33px;
+}
+
+main .registration .registration-form-pdata-gender .label {
+  margin-right: 20px;
+}
+
+main .registration .registration-form-pdata-gender .checkbox {
+  display: none;
+}
+
+main .registration .registration-form-pdata-gender .text {
+  position: relative;
+  padding: 5px 0 0 40px;
+  display: inline-block;
+}
+
+main .registration .registration-form-pdata-gender .text::before {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #a4a4a4;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+
+main .registration .registration-form-pdata-gender .text::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #F16D7F;
+  opacity: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border-radius: 50%;
+}
+
+main .registration .registration-form-pdata-gender .checkbox:checked + .text::after {
+  opacity: 1;
+}
+
+main .registration .registration-form-pdata-email {
+  margin-bottom: 20px;
+}
+
+main .registration .registration-form-pdata-password {
+  margin-bottom: 15px;
+}
+
+main .registration .registration-form-pdata-p {
+  margin-bottom: 39px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 15.6px;
+  color: #B1B1B1;
+}
+
+main .registration .registration-form-pdata-btn {
+  width: 167px;
+  height: 50px;
+  padding: 17px 29px 17px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #F16D7F;
+  border: none;
+  position: relative;
+  font-size: 14px;
+  text-align: justify;
+}
+
+main .registration .registration-form-pdata-btn .text {
+  margin-right: 20px;
+}
+
+main .registration .registration-form-pdata-btn-line {
+  position: absolute;
+  top: 50%;
+  right: 18%;
+}
+
+main .registration .registration-form-pdata-btn-trngl {
+  position: absolute;
+  top: 43%;
+  right: 18%;
+}
+
+main .registration .registration-info {
+  font-family: 'Lato', sans-serif;
+  margin: 0 0 0 60px;
+}
+
+main .registration .registration-info-article {
+  text-transform: uppercase;
+}
+
+main .registration .registration-info-article, main .registration .registration-info-text, main .registration .registration-info-points {
+  margin-bottom: 22px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
 }
 
 main .button {

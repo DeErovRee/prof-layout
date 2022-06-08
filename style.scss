@@ -9,7 +9,6 @@ $margin: 32px;
 }
 
 .container {
-    width: 100%;
     max-width: 1140px;
     margin: 0 auto;
     padding-left: 32px;
@@ -971,6 +970,149 @@ main {
         }
     }
 
+    .registration {
+        display: flex;
+
+        .registration-form {
+            margin: 0 60px 0 0;
+
+            &-pdata {
+                display: flex;
+                flex-direction: column;
+                font-family: 'Lato', sans-serif;
+
+                &-article {
+                    font-size: 16px;
+                    font-weight: 300;
+                    margin-bottom: 20px;
+                }
+
+                &-fname {
+                    margin-bottom: 20px;
+                }
+
+                &-lname {
+                    margin-bottom: 31px;
+                }
+
+                input {
+                    border: 1px solid #a4a4a4;
+                    padding: 12.5px 16.5px 15.5px;
+                    color: #B1B1B1;
+                }
+                
+                &-gender {
+                    margin-bottom: 33px;
+                    
+                    .label {
+                        margin-right: 20px;
+                    }
+
+                    .checkbox {
+                        display: none;
+                    }
+
+                    .text {
+                        position: relative;
+                        padding: 5px 0 0 40px;
+                        display: inline-block;
+
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            height: 20px;
+                            width: 20px;
+                            border: 1px solid #a4a4a4;
+                            position: absolute;
+                            border-radius: 50%;
+                            top: 0;
+                            left: 0;
+                        }
+    
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 6px;
+                            left: 6px;
+                            display: block;
+                            width: 10px;
+                            height: 10px;
+                            background-color: #F16D7F;
+                            opacity: 0;
+                            transition: .2s;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .checkbox:checked + .text::after {
+                        opacity: 1;
+                    }
+                }
+
+                &-email {
+                    margin-bottom: 20px;
+                }
+
+                &-password {
+                    margin-bottom: 15px;
+                }
+
+                &-p {
+                    margin-bottom: 39px;
+                    font-size: 13px;
+                    font-weight: 300;
+                    line-height: 15.6px;
+                    color: #B1B1B1;
+                }
+
+                &-btn {
+                    width: 167px;
+                    height: 50px;
+                    padding: 17px 29px 17px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    background-color: #F16D7F;
+                    border: none;
+                    position: relative;
+                    font-size: 14px;
+                    text-align: justify;
+
+                    .text {
+                        margin-right: 20px;
+                    }
+
+                    &-line {
+                        position: absolute;
+                        top: 50%;
+                        right: 18%;
+                    }
+
+                    &-trngl {
+                        position: absolute;
+                        top: 43%;
+                        right: 18%;
+                    }
+                }
+            }
+        }
+
+        .registration-info {
+            font-family: 'Lato', sans-serif;
+            margin: 0 0 0 60px;
+
+            &-article {
+                text-transform: uppercase;
+            }
+
+            &-article, &-text, &-points {
+                margin-bottom: 22px;
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 28.8px;
+            }
+        }
+    }
+
     .button {
         display: flex;
         justify-content: center;
@@ -1322,6 +1464,8 @@ main {
         color: #FBFBFB;
     }
 }
+
+
 
 @media (max-width: 1200px) {
 
