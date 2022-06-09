@@ -876,6 +876,8 @@ main {
             &-content {
 
                 &-pdata {
+                    width: 360px;
+                    height: 272px;
                     margin: 0 0 0 128px;
 
                     &-form {
@@ -893,10 +895,9 @@ main {
                             }
                         }
 
-                        button {
+                        &-quote {
                             color: #a4a4a4;
                             text-transform: uppercase;
-                            margin-bottom: 20px;
                             padding: 12.5px 16.5px 12.5px;
                             border: 1px solid #a4a4a4;
                             background: none;
@@ -1526,12 +1527,10 @@ main {
         display: flex;
 
         &-pdata {
-            width: 50%;
             margin: 0;
         }
 
         &-price {
-            width: 50%;
             margin: 0;
         }
     }
@@ -1547,6 +1546,10 @@ main {
 
     main .cart-info-price {
         margin: 0;
+    }
+
+    main .cart-product-options {
+        justify-content: space-around;
     }
 
     main .categories_items_small .card_small_men {
