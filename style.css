@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@font-face {
+  font-family: 'Lato';
+  src: url("fonts/lato/lato-regular-webfont.woff2") format("woff2"), url("fonts/lato/lato-regular-webfont.woff") format("woff"), url("fonts/lato/lato-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -124,7 +130,6 @@ main .chapter {
 }
 
 main .chapter .chapter {
-  margin-bottom: 96px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,6 +164,13 @@ main .chapter .chapter-nav-path {
   font-weight: 300;
   line-height: 16.8px;
   color: #636363;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 main .choice .filters {
@@ -863,6 +875,7 @@ main .info-product .info-product-line-color {
 }
 
 main .cart {
+  margin-top: 96px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1143,6 +1156,7 @@ main .registration {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 64px;
 }
 
 main .registration .registration-form {
@@ -1248,6 +1262,15 @@ main .registration .registration-form-pdata-p {
 main .registration .registration-form-pdata-btn {
   width: 167px;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 17px 29px 17px;
   text-transform: uppercase;
   color: #fff;
@@ -1260,18 +1283,6 @@ main .registration .registration-form-pdata-btn {
 
 main .registration .registration-form-pdata-btn .text {
   margin-right: 20px;
-}
-
-main .registration .registration-form-pdata-btn-line {
-  position: absolute;
-  top: 50%;
-  right: 18%;
-}
-
-main .registration .registration-form-pdata-btn-trngl {
-  position: absolute;
-  top: 43%;
-  right: 18%;
 }
 
 main .registration .registration-info {
@@ -1300,6 +1311,8 @@ main .button {
 }
 
 main .button .button_all-prod {
+  font-family: 'Lato';
+  color: #FF6A6A;
   border: 1px solid #FF6A6A;
   padding: 15px 38px;
   background: #fff;
@@ -1470,7 +1483,7 @@ main .button .button_all-prod:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #222224;
+  color: #fff;
 }
 
 .bottom .copy {

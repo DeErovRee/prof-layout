@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/lato/lato-regular-webfont.woff2') format('woff2'),
+         url('fonts/lato/lato-regular-webfont.woff') format('woff'),
+         url('fonts/lato/lato-regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 $screenWidth: 1140px;
 $margin: 32px;
@@ -110,7 +118,6 @@ main {
         background: #F8F3F4;
 
         .chapter {
-            margin-bottom: 96px;
             display: flex;
             justify-content: space-between;
             align-content: center;
@@ -136,6 +143,9 @@ main {
                     font-weight: 300;
                     line-height: 16.8px;
                     color: #636363;
+                    list-style: none;
+                    display: flex;
+                    justify-content: flex-end;
                 }
             }
         }
@@ -749,6 +759,7 @@ main {
     }
 
     .cart {
+        margin-top: 96px;
         display: flex;
         font-family: 'Lato', 'Arial', sans-serif;
 
@@ -984,6 +995,7 @@ main {
 
     .registration {
         display: flex;
+        margin-top: 64px;
 
         .registration-form {
             margin: 0 60px 0 0;
@@ -1080,6 +1092,9 @@ main {
                 &-btn {
                     width: 167px;
                     height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                     padding: 17px 29px 17px;
                     text-transform: uppercase;
                     color: #fff;
@@ -1093,17 +1108,6 @@ main {
                         margin-right: 20px;
                     }
 
-                    &-line {
-                        position: absolute;
-                        top: 50%;
-                        right: 18%;
-                    }
-
-                    &-trngl {
-                        position: absolute;
-                        top: 43%;
-                        right: 18%;
-                    }
                 }
             }
         }
@@ -1130,6 +1134,8 @@ main {
         justify-content: center;
         
         .button_all-prod {
+            font-family: 'Lato';
+            color: #FF6A6A;
             border: 1px solid #FF6A6A;
             padding: 15px 38px;
             background: #fff;
@@ -1246,7 +1252,7 @@ main {
                     line-height: 17px;
                     display: flex;
                     align-items: center;
-                    color: #222224;
+                    color: #fff;
                     
                 }
             }
