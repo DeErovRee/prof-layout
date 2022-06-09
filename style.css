@@ -810,15 +810,10 @@ main .info-product .info-product-filter-btn {
   border: none;
   background: none;
   padding: 0 3px 0 3px;
-  margin: 0 25px 0 25px;
 }
 
-main .info-product .info-product-filter-btn:first-child {
-  margin: 0 25px 0 0px;
-}
-
-main .info-product .info-product-filter-btn:last-child {
-  margin: 0 0px 0 25px;
+main .info-product .info-product-filter-btn:nth-child(2) {
+  margin: 0 25px 0;
 }
 
 main .info-product .info-product-filter-btn-txt {
@@ -1801,6 +1796,15 @@ main .button .button_all-prod:hover {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  main .fetured .card_items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  main .fetured .card_items .card:last-child {
+    display: none;
+  }
   main .categories_items_small .card_small_men {
     margin-left: 19px;
     margin-right: 19px;
@@ -1991,6 +1995,44 @@ main .button .button_all-prod:hover {
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
+  }
+  main .chapter .chapter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .chapter .chapter-title {
+    width: 100%;
+    margin: 24px 0 32px;
+  }
+  main .chapter .chapter-nav {
+    width: 100%;
+    margin: 0 0 46px;
+  }
+  main .chapter .chapter-nav-path {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .poster-product-section .poster-product {
+    height: 624px;
+  }
+  main .poster-product-section .poster-product img {
+    margin: 25px 0 122px;
+  }
+  main .fetured .card_items .card:last-child {
+    display: block;
+  }
+  main .fetured .card_items .card:nth-child(2) {
+    display: none;
+  }
+  main .info-product .info-product-line {
+    width: 50%;
+  }
+  main .info-product-filter-btn {
+    font-size: 10px;
+    line-height: 12px;
   }
   .bottom .subs-and-prom .smoth {
     padding-top: 64px;

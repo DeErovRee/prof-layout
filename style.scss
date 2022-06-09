@@ -697,14 +697,9 @@ main {
                     border: none;
                     background: none;
                     padding: 0 3px 0 3px;
-                    margin: 0 25px 0 25px;
 
-                    &:first-child {
-                        margin: 0 25px 0 0px;
-                    }
-
-                    &:last-child {
-                        margin: 0 0px 0 25px;
+                    &:nth-child(2) {
+                        margin: 0 25px 0;
                     }
 
                     &-txt {
@@ -1565,6 +1560,14 @@ main {
         justify-content: space-around;
     }
 
+    main .fetured .card_items {
+        flex-direction: row-reverse;
+    
+        & .card:last-child {
+            display: none;
+        }
+    }
+
     main .categories_items_small .card_small_men {
         margin-left: 19px;
         margin-right: 19px;
@@ -1760,6 +1763,55 @@ main {
         font-weight: 400;
         font-size: 12px;
         line-height: 14px;
+    }
+
+    main .chapter .chapter {
+        flex-direction: column;
+
+        &-title {
+            width: 100%;
+            margin: 24px 0 32px;
+        }
+
+        &-nav {
+            width: 100%;
+            margin: 0 0 46px;
+
+            &-path {
+                justify-content: center;
+            }
+        }
+    }
+
+    main .poster-product-section .poster-product {
+        height: 624px;
+
+        img {
+            margin: 25px 0 122px
+        }
+    }
+
+    main .fetured .card_items {
+    
+        & .card:last-child {
+            display: block;
+        }
+
+        & .card:nth-child(2) {
+            display: none;
+        }
+    }
+
+    main .info-product {
+
+        & .info-product-line {
+            width: 50%;
+        }
+    
+        &-filter-btn {
+            font-size: 10px;
+            line-height: 12px;
+        }
     }
 
     .bottom .subs-and-prom .smoth {
