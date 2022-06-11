@@ -148,6 +148,7 @@ main .chapter .chapter-title {
   font-size: 24px;
   font-weight: 400;
   line-height: 28.8px;
+  text-transform: uppercase;
   margin: 60px 0 60px;
   width: 50%;
 }
@@ -171,6 +172,11 @@ main .chapter .chapter-nav-path {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+main .chapter .chapter-nav-path-li + li:before {
+  padding: 8px;
+  content: "/\00a0";
 }
 
 main .choice .filters {
@@ -1032,27 +1038,20 @@ main .cart-info-content-pdata-form {
           flex-direction: column;
 }
 
-main .cart-info-content-pdata-form input {
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding: 12.5px 16.5px 12.5px;
-  border: 1px solid #a4a4a4;
+main .cart-info-content-pdata-form-country::-webkit-input-placeholder {
+  color: #000;
 }
 
-main .cart-info-content-pdata-form input::-webkit-input-placeholder {
-  color: #a4a4a4;
+main .cart-info-content-pdata-form-country:-ms-input-placeholder {
+  color: #000;
 }
 
-main .cart-info-content-pdata-form input:-ms-input-placeholder {
-  color: #a4a4a4;
+main .cart-info-content-pdata-form-country::-ms-input-placeholder {
+  color: #000;
 }
 
-main .cart-info-content-pdata-form input::-ms-input-placeholder {
-  color: #a4a4a4;
-}
-
-main .cart-info-content-pdata-form input::placeholder {
-  color: #a4a4a4;
+main .cart-info-content-pdata-form-country::placeholder {
+  color: #000;
 }
 
 main .cart-info-content-pdata-form-quote {
@@ -1063,6 +1062,29 @@ main .cart-info-content-pdata-form-quote {
   background: none;
   width: 33.3333%;
   font-size: 11px;
+}
+
+main .cart-info-content-pdata-form-state, main .cart-info-content-pdata-form-postcode, main .cart-info-content-pdata-form-country {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  padding: 12.5px 16.5px 12.5px;
+  border: 1px solid #a4a4a4;
+}
+
+main .cart-info-content-pdata-form-country::-webkit-input-placeholder {
+  color: #a4a4a4;
+}
+
+main .cart-info-content-pdata-form-country:-ms-input-placeholder {
+  color: #a4a4a4;
+}
+
+main .cart-info-content-pdata-form-country::-ms-input-placeholder {
+  color: #a4a4a4;
+}
+
+main .cart-info-content-pdata-form-country::placeholder {
+  color: #a4a4a4;
 }
 
 main .cart-info-content-price {
@@ -1815,6 +1837,9 @@ main .button .button_all-prod:hover {
   main .button .button_all-prod {
     margin: 33px 0 0;
   }
+  main .choice .filters-left .filter {
+    width: 300px;
+  }
   .bottom ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2033,6 +2058,56 @@ main .button .button_all-prod:hover {
   main .info-product-filter-btn {
     font-size: 10px;
     line-height: 12px;
+  }
+  main .choice .filters-left {
+    width: 20%;
+  }
+  main .choice .filters-left .filter-list-wrp {
+    width: 400%;
+  }
+  main .choice .filters-left .filter {
+    width: 100%;
+    margin: 24px 0 32px 0;
+    padding: 0;
+  }
+  main .choice .filters-left .filter-btn {
+    margin: 0;
+  }
+  main .choice .filters-left .filter-btn .list-size {
+    width: 50px;
+  }
+  main .choice .filters-left .filter-btn .list-size-btn-title {
+    width: 50px;
+  }
+  main .choice .filters-left .filter-btn span {
+    display: none;
+  }
+  main .choice .filters-left .filter-btn svg {
+    height: 25px;
+    width: 37.5px;
+    margin: 0;
+  }
+  main .choice .filters-right {
+    width: 80%;
+  }
+  main .choice .filters-right .filters-btn {
+    margin: 26px 24px 0px 0;
+    padding: 0;
+  }
+  main .choice .filters-right .filters-btn .list-size {
+    width: 50px;
+  }
+  main .choice .filters-right .filters-btn .list-size-btn-title {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+  main .choice .filters-right .filters-btn .list-size-btn-title svg {
+    left: 100%;
+  }
+  main .choice .filters-right .filters-btn-txt {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    line-height: 14.4px;
   }
   .bottom .subs-and-prom .smoth {
     padding-top: 64px;
