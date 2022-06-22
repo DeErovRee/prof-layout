@@ -328,7 +328,6 @@ main {
                 width: ($screenWidth / 3)*2;
                 display: flex;
                 justify-content: flex-start;
-                align-items: flex-start;
             }
 
             &-btn {
@@ -363,7 +362,6 @@ main {
                 }
 
                 .list-size {
-                    width: 80px;
                     border: none;
                     background-color: transparent;
                     position: relative;
@@ -389,8 +387,8 @@ main {
                 .list-size-btn-title svg {
                     fill: #6F6E6E;
                     position: absolute;
-                    top: 35%;
-                    left: 45%;
+                    top: 30%;
+                    right: -15px;
                 }
 
                 .list-size-btn-title:hover {
@@ -409,17 +407,20 @@ main {
                     fill: currentColor;
                 }
 
-                #switch {
+                #switch-trend,
+                #switch-size,
+                #switch-price {
                     display: none;
                 }
 
-                #switch:checked ~ .list-size-wrp {
+                #switch-trend:checked ~ .list-size-wrp,
+                #switch-size:checked ~ .list-size-wrp,
+                #switch-price:checked ~ .list-size-wrp {
                     display: flex;
                 }
                 
                 .list-size-wrp {
                     z-index: 1;
-                    width: 79px;
                     display: none;
                     flex-direction: column;
                     margin: 5px 0 0 0;
@@ -429,6 +430,8 @@ main {
                     position: absolute;
                     top: 18px;
                     left: 0px;
+                    white-space: nowrap;
+                    align-items: flex-start;
                 }
                 .list-size-item {
                     display: none;
@@ -1829,66 +1832,70 @@ main {
 
     main .choice {
 
-        & .filters-left {
-            width: 20%;
+        & .filters {
+            align-items: flex-start;
 
-            & .filter-list-wrp {
-                width: 400%;
+            &-left {
+                width: 20%;
+
+                & .filter-list-wrp {
+                    width: 400%;
+                }
+
+                & .filter {
+                    width: 100%;
+                    margin: 24px 0 32px 0;
+                    padding: 0;
+
+                    &-btn {
+                        margin: 0;
+
+                        & .list-size {
+                            width: 50px;
+
+                            &-btn-title {
+                                width: 50px;
+                            }
+                        }
+
+                        & span {
+                            display: none;
+                        }
+
+                        & svg {
+                            height: 25px;
+                            width: 37.5px;
+                            margin: 0;
+                        }
+                    }
+                }
             }
 
-            & .filter {
-                width: 100%;
-                margin: 24px 0 32px 0;
-                padding: 0;
+            &-right {
+                width: 80%;
+                justify-content: flex-end;
 
-                &-btn {
-                    margin: 0;
+                .filters-btn {
+                    margin: 26px 30px 0px 0;
+                    padding: 0;
 
                     & .list-size {
-                        width: 50px;
 
                         &-btn-title {
-                            width: 50px;
+                            font-size: 12px;
+                            line-height: 14.4px;
+
+                            svg {
+                                right: -15px;
+                            }
                         }
                     }
-
-                    & span {
-                        display: none;
-                    }
-
-                    & svg {
-                        height: 25px;
-                        width: 37.5px;
-                        margin: 0;
-                    }
-                }
-            }
-        }
-
-        & .filters-right {
-            width: 80%;
-
-            .filters-btn {
-                margin: 26px 24px 0px 0;
-                padding: 0;
-
-                & .list-size {
-                    width: 50px;
-
-                    &-btn-title {
+                    
+                    &-txt {
+                        font-family: 'Lato', sans-serif;
                         font-size: 12px;
                         line-height: 14.4px;
-
-                        svg {
-                            left: 100%;
-                        }
                     }
-                }
-                
-                &-txt {
-                    font-family: 'Lato', sans-serif;
-                    font-size: 12px;
-                    line-height: 14.4px;
                 }
             }
         }

@@ -361,9 +361,6 @@ main .choice .filters-right {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 main .choice .filters-btn {
@@ -403,7 +400,6 @@ main .choice .filters-btn button:focus-visible {
 }
 
 main .choice .filters-btn .list-size {
-  width: 80px;
   border: none;
   background-color: transparent;
   position: relative;
@@ -429,8 +425,8 @@ main .choice .filters-btn .list-size-btn-title {
 main .choice .filters-btn .list-size-btn-title svg {
   fill: #6F6E6E;
   position: absolute;
-  top: 35%;
-  left: 45%;
+  top: 30%;
+  right: -15px;
 }
 
 main .choice .filters-btn .list-size-btn-title:hover {
@@ -449,11 +445,15 @@ main .choice .filters-btn .list-size-btn-title:active svg {
   fill: currentColor;
 }
 
-main .choice .filters-btn #switch {
+main .choice .filters-btn #switch-trend,
+main .choice .filters-btn #switch-size,
+main .choice .filters-btn #switch-price {
   display: none;
 }
 
-main .choice .filters-btn #switch:checked ~ .list-size-wrp {
+main .choice .filters-btn #switch-trend:checked ~ .list-size-wrp,
+main .choice .filters-btn #switch-size:checked ~ .list-size-wrp,
+main .choice .filters-btn #switch-price:checked ~ .list-size-wrp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -461,7 +461,6 @@ main .choice .filters-btn #switch:checked ~ .list-size-wrp {
 
 main .choice .filters-btn .list-size-wrp {
   z-index: 1;
-  width: 79px;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -475,6 +474,10 @@ main .choice .filters-btn .list-size-wrp {
   position: absolute;
   top: 18px;
   left: 0px;
+  white-space: nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 main .choice .filters-btn .list-size-item {
@@ -2059,6 +2062,11 @@ main .button .button_all-prod:hover {
     font-size: 10px;
     line-height: 12px;
   }
+  main .choice .filters {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
   main .choice .filters-left {
     width: 20%;
   }
@@ -2089,20 +2097,20 @@ main .button .button_all-prod:hover {
   }
   main .choice .filters-right {
     width: 80%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   main .choice .filters-right .filters-btn {
-    margin: 26px 24px 0px 0;
+    margin: 26px 30px 0px 0;
     padding: 0;
-  }
-  main .choice .filters-right .filters-btn .list-size {
-    width: 50px;
   }
   main .choice .filters-right .filters-btn .list-size-btn-title {
     font-size: 12px;
     line-height: 14.4px;
   }
   main .choice .filters-right .filters-btn .list-size-btn-title svg {
-    left: 100%;
+    right: -15px;
   }
   main .choice .filters-right .filters-btn-txt {
     font-family: 'Lato', sans-serif;
