@@ -52,6 +52,126 @@ a:hover {
   cursor: pointer;
   position: relative;
 }
+.top .menu_right_item input:focus,
+.top .menu_right_item button:focus {
+  outline: none;
+}
+.top .menu_right_item input:focus-visible,
+.top .menu_right_item button:focus-visible {
+  outline: 2px solid #F16D7F;
+}
+.top .menu_right_item #switch-menu_aside {
+  display: none;
+}
+.top .menu_right_item #switch-menu_aside:checked ~ .filter-list-wrp {
+  display: block;
+}
+.top .menu_right_item .filter {
+  margin: 38px 25px 18px 0px;
+  padding: 13px 16px 16px 16px;
+  width: 360px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  /* box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21); */
+  /* NB! */
+  position: relative;
+}
+.top .menu_right_item .filter-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  text-align: left;
+}
+.top .menu_right_item .filter-btn span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16.8px;
+  text-transform: uppercase;
+}
+.top .menu_right_item .filter-btn svg {
+  margin: 0 0 0 11px;
+  fill: currentColor;
+}
+.top .menu_right_item .filter-btn:hover {
+  color: #F16D7F;
+}
+.top .menu_right_item .filter-btn:active {
+  color: #222224;
+}
+.top .menu_right_item .filter-list-wrp {
+  z-index: 1;
+  display: none;
+  width: 232px;
+  position: absolute;
+  top: 54px;
+  right: 0;
+  padding: 37px 34px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.top .menu_right_item .filter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.top .menu_right_item .filter-list-item {
+  width: 100%;
+  margin: 24px 0 12px 0;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.8px;
+  position: relative;
+}
+.top .menu_right_item .filter-list-item a {
+  text-transform: uppercase;
+  color: #EF5B70;
+  text-decoration: none;
+}
+.top .menu_right_item .filter-list-item:hover::before {
+  background-color: red;
+}
+.top .menu_right_item .filter-list-item:hover a {
+  color: red;
+}
+.top .menu_right_item .filter-list-item:active::before {
+  background-color: #ccc;
+}
+.top .menu_right_item .filter-list-item:active a {
+  color: #ccc;
+}
+.top .menu_right_item .filter-sublist {
+  margin: 12px 0 0 0;
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
+  list-style: none;
+}
+.top .menu_right_item .filter-sublist-item {
+  margin: 0 0 11px 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+.top .menu_right_item .filter-sublist-item:last-child {
+  margin: 0 0 24px 0;
+}
+.top .menu_right_item .filter-sublist-item a {
+  color: #6F6E6E;
+  text-decoration: none;
+}
+.top .menu_right_item .filter-sublist-item:hover a {
+  color: #EF5B70;
+}
+.top .menu_right_item .filter-sublist-item:active a {
+  color: #000;
+}
 .top .menu_right_item .circle {
   color: #ffffff;
   text-align: center;
@@ -1483,6 +1603,10 @@ main .button .button_all-prod:hover {
   main .chapter .chapter-title {
     text-align: center;
     margin: 50px 0 69px 0;
+  }
+
+  main .choice .filters-btn .list-size-wrp {
+    left: -50px;
   }
 
   main .cart {
