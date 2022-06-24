@@ -791,6 +791,7 @@ main .cart-product-goods-card-info {
   padding: 22px 31px;
 }
 main .cart-product-goods-card-info-title {
+  margin-right: 30px;
   margin-bottom: 42px;
   font-size: 24px;
   line-height: 28.8px;
