@@ -24,7 +24,7 @@ Vue.component('cart-item', {
             </div>
             <div class="right-block">
                 <div class="product-price">{{cartItem.quantity*cartItem.price}} $</div>
-                <button class="buy-btn" @click="$root.removeProduct(cartItem), $root.cartEmpty()">X</button>
+                <button class="buy-btn" @click="$root.removeProduct(cartItem), $root.cartEmpty(), $root.cartStatusVisible()">X</button>
             </div>
         </div>
     `

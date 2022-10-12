@@ -50,7 +50,11 @@ const app = new Vue({
             }
         },
         cartStatusVisible() {
-            this.cart.length = 0 ? this.showCartStatus = false : this.showCartStatus = true;
+            if (this.cart.length > 0) {
+                this.showCartStatus = true;
+            } else if (this.cart.length < 1) {
+                this.showCartStatus = false;
+            }
         },
         cartEmpty() {
             if (this.cart.length < 1) {
