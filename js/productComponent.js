@@ -16,7 +16,7 @@ Vue.component('product', {
         <article class="card">
             <div class="img">
                 <div class="hover">
-                    <button class="button_add-to-cart" @click="$parent.$emit('add-product', product), $parent.$emit('cart-empty')">
+                    <button class="button_add-to-cart" @click="$parent.$emit('add-product', product), $parent.$emit('cart-empty'), $root.cartStatusVisible()">
                         <img class="cart_img" src="images/cart.svg" alt="">
                         Add to cart
                     </button>

@@ -9,6 +9,7 @@ const app = new Vue({
         cart: [],
         imgCatalog: [], // 'https://via.placeholder.com/200x150'
         userSearch: '',
+        showCartStatus: false,
         showCart: false,
         emptyCart: true,
         error: false,
@@ -32,8 +33,6 @@ const app = new Vue({
             } else {
                 this.cart.push(Object.assign({quantity:1}, product));
             }
-            
-            console.log(this.cart)
         },
         removeProduct(product){
             let remove = this.cart.find(el => el.id_product === product.id_product);
@@ -50,13 +49,14 @@ const app = new Vue({
                 this.showCart = false;
             }
         },
+        cartStatusVisible() {
+            this.cart.length = 0 ? this.showCartStatus = false : this.showCartStatus = true;
+        },
         cartEmpty() {
             if (this.cart.length < 1) {
                 this.emptyCart = true;
-                console.log(this.emptyCart)
             } else {
                 this.emptyCart = false;
-                console.log(this.emptyCart)
             }
         }
     },

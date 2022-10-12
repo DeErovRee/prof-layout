@@ -237,6 +237,7 @@ a:hover {
                     background: #F16D7F;
                     right: -9.5px;
                     top: -9.5px;
+                    box-sizing: border-box;
                 }
 
                 .btn-cart {
@@ -324,8 +325,6 @@ a:hover {
             img {
                 margin-bottom: -5px;
                 width: 100%;
-                -webkit-filter: brightness(40%);
-                filter: brightness(40%);
             }
         }
 
@@ -803,10 +802,6 @@ main {
 
                 img {
                     width: 100%;
-
-                    &:hover {
-                        filter: brightness(40%);
-                    }
                 }
 
                 .extra_img {

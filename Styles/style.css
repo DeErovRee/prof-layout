@@ -203,6 +203,7 @@ a:hover {
   background: #F16D7F;
   right: -9.5px;
   top: -9.5px;
+  box-sizing: border-box;
 }
 .top .menu_right_item .btn-cart {
   background-color: inherit;
@@ -281,7 +282,6 @@ a:hover {
 .top_bottom .poster_left img {
   margin-bottom: -5px;
   width: 100%;
-  filter: brightness(40%);
 }
 .top_bottom .poster_img {
   width: 100%;
@@ -681,9 +681,6 @@ main .fetured .card_items .card:hover {
 }
 main .fetured .card_items .card img {
   width: 100%;
-}
-main .fetured .card_items .card img:hover {
-  filter: brightness(40%);
 }
 main .fetured .card_items .card .extra_img {
   width: auto;
