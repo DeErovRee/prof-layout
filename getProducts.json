@@ -1,0 +1,38 @@
+[
+  {
+    "id_product": 100,
+    "product_name": "Panama Hat",
+    "price": 19.99,
+    "img": "./images/product-man-panamahat.png"
+  },
+  {
+    "id_product": 101,
+    "product_name": "Green Shirt",
+    "price": 54.00,
+    "img": "./images/product-black-greenshirt.png"
+  },
+  {
+    "id_product": 102,
+    "product_name": "Red Shirt",
+    "price": 59.99,
+    "img": "./images/product-black-redshirt.png"
+  },
+  {
+    "id_product": 103,
+    "product_name": "Blue Cap",
+    "price": 5.99,
+    "img": "./images/product-man-bluecap.png"
+  },
+  {
+    "id_product": 104,
+    "product_name": "Yellow Pants",
+    "price": 89.00,
+    "img": "./images/product-man-yellowpants.png"
+  },
+  {
+    "id_product": 105,
+    "product_name": "White Shirt",
+    "price": 41.00,
+    "img": "./images/product-man-whitetshirt.png"
+  }
+]
