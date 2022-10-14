@@ -10,6 +10,24 @@ let doubleNum = (num) => {
 
 Фрагмент 1 не будет работать, так как function expression не может быть использован до объявления.
 
+2. <template 
+        v-for="i of count" 
+	:key="i" >
+		<component-name
+			v-if="i < 10" 
+		/>
+	</template>
+
+	<script>
+	export default {
+		data() {
+			return {
+				count: 20;
+			};
+		},
+	};
+	</script>
+
 3.
 const resources = [
 {
