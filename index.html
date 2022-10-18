@@ -20,7 +20,7 @@
                                 </a>
                             </li>
                             <li class="menu_left_item">
-                                <searchline></searchline>
+                                <search ref="search"></search>
                             </li>
                         </ul>
                         <ul class="menu_right">
@@ -115,12 +115,14 @@
                                 </a>
                             </li>
                             <li class="menu_right_item">
-                                <button class="btn-cart" type="button" @click="cartVisible">
-                                    <cartstatus :arr="cart" :visibility="showCartStatus"></cartstatus>
-                                    <!-- <div class="circle">5</div> -->
+                                <button class="btn-cart" type="button" @click="$root.$refs.cart.cartVisible()">
+                                    <!-- <cartstatus ref="cartstatus" 
+                                    :arr="cart"
+                                    :visibility="$root.$refs.cartstatus.showCartStatus"></cartstatus> -->
                                     <img src="images/cart.svg" alt="">
                                 </button>
-                                <cart :cart-items="cart"
+                                <cart ref="cart"
+                                :cart-items="cart"
                                 :img="imgCatalog"
                                 :visibility="showCart"
                                 :empty-cart="emptyCart"></cart>
@@ -387,7 +389,7 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
         
         <script src="./js/cartComponent.js"></script>
-        <script src="./js/cartStatusComponent.js"></script>
+        <!-- <script src="./js/cartStatusComponent.js"></script> -->
         <script src="./js/searchComponent.js"></script>
         <script src="./js/productComponent.js"></script>
         <script src="./js/main.js"></script>

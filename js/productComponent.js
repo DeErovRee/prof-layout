@@ -1,22 +1,10 @@
-Vue.component('products', {
-    props: ['products', 'img'],
-    template: `
-        <div class="products">
-            <product v-for="item of products"
-            :key="item.id_product"
-            :img="img"
-            :product="item"></product>
-        </div>
-    `
-});
-
-Vue.component('product', {
+const product = {
     props: ['product', 'img'],
     template: `
         <article class="card">
             <div class="img">
                 <div class="hover">
-                    <button class="button_add-to-cart" @click="$parent.$emit('add-product', product), $parent.$emit('cart-empty'), $root.cartStatusVisible()">
+                    <button class="button_add-to-cart" @click="$root.$refs.cart.addProduct(product)", $root.$refs.cart.cartEmpty'), $root.cartStatusVisible()">
                         <img class="cart_img" src="images/cart.svg" alt="">
                         Add to cart
                     </button>
@@ -28,4 +16,47 @@ Vue.component('product', {
             <p class="text_p_price">{{ product.price }} $</p>
         </article>
     `
-})
+}
+
+const products = {
+    components: {product},
+    data () {
+        return {
+            catalogUrl: '/catalogData.json',
+            products: [],
+            imgCatalog: [], // 'https://via.placeholder.com/200x150'
+            filtered: [],
+        }
+    },
+    mounted () {
+        this.$parent.getJson(`${API + this.catalogUrl}`)
+            .then(data => {
+                for (let el of data) {
+                    this.product.push(el);
+                    this.filtered.push(el);
+                }
+            });
+        
+        this.$parent.getJson(`getProduct.json`)
+            .then(data => {
+                for (let el of data) {
+                    this.product.push(el);
+                    this.filtered.push(el);
+                }
+            })
+    },
+    methods: {
+        filter(val){
+            const regexp = new RegExp(val, 'i');
+            this.filtered = this.products.filter(product => regexp.test(product.product_name));
+        },
+    },
+    template: `
+        <div class="products">
+            <product v-for="item of products"
+            :key="item.id_product"
+            :img="img"
+            :product="item"></product>
+        </div>
+    `
+};
