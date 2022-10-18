@@ -116,9 +116,7 @@
                             </li>
                             <li class="menu_right_item">
                                 <button class="btn-cart" type="button" @click="$root.$refs.cart.cartVisible()">
-                                    <!-- <cartstatus ref="cartstatus" 
-                                    :arr="cart"
-                                    :visibility="$root.$refs.cartstatus.showCartStatus"></cartstatus> -->
+                                    <cartstatus ref="cartstatus"></cartstatus>
                                     <img src="images/cart.svg" alt="">
                                 </button>
                                 <cart class="cart-block" ref="cart"></cart>

@@ -14,7 +14,7 @@ const app = new Vue({
         // emptyCart: true,
         error: false,
     },
-    components: {cart, products, search},
+    components: {cart, products, search, cartstatus},
     methods: {
         
         getJson(url){

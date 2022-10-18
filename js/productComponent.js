@@ -4,7 +4,7 @@ const product = {
         <article class="card">
             <div class="img">
                 <div class="hover">
-                    <button class="button_add-to-cart" @click="$root.$refs.cart.addProduct(product), $root.$refs.cart.cartEmpty(), $root.$refs.cart.cartStatusVisible()">
+                    <button class="button_add-to-cart" @click="$root.$refs.cart.addProduct(product), $root.$refs.cart.cartEmpty(), $root.$refs.cartstatus.cartStatusVisible()">
                         <img class="cart_img" src="images/cart.svg" alt="">
                         Add to cart
                     </button>

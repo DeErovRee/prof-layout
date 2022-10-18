@@ -11,7 +11,7 @@ const cartItem = {
             </div>
             <div class="right-block">
                 <div class="product-price">{{ cartItem.quantity * cartItem.price }} $</div>
-                <button class="buy-btn" @click="$parent.removeProduct(cartItem), $parent.cartEmpty(), $parent.cartStatusVisible()">X</button>
+                <button class="buy-btn" @click="$parent.removeProduct(cartItem), $parent.cartEmpty(), $root.$refs.cartstatus.cartStatusVisible()">X</button>
             </div>
         </div>
     `
@@ -28,7 +28,6 @@ const cart = {
     },
     methods: {
         addProduct(product){
-            console.log(this.cart)
             let find = this.cart.find(el => el.id_product === product.id_product)
             if (find) {
                 find.quantity++;
