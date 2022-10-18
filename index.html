@@ -121,11 +121,7 @@
                                     :visibility="$root.$refs.cartstatus.showCartStatus"></cartstatus> -->
                                     <img src="images/cart.svg" alt="">
                                 </button>
-                                <cart ref="cart"
-                                :cart-items="cart"
-                                :img="imgCatalog"
-                                :visibility="showCart"
-                                :empty-cart="emptyCart"></cart>
+                                <cart class="cart-block" ref="cart"></cart>
                             </li>
                             
                             <!-- <li class="menu_right_item">
@@ -307,7 +303,7 @@
             </section>
 
             <section class="fetured container">
-                <products class="card_items":products="filtered" :img="imgCatalog" @add-product="addProduct" @cart-empty="cartEmpty">
+                <products class="card_items">
             </section>
 
             <section class="container">
@@ -389,7 +385,7 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
         
         <script src="./js/cartComponent.js"></script>
-        <!-- <script src="./js/cartStatusComponent.js"></script> -->
+        <script src="./js/cartStatusComponent.js"></script>
         <script src="./js/searchComponent.js"></script>
         <script src="./js/productComponent.js"></script>
         <script src="./js/main.js"></script>

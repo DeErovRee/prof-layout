@@ -229,6 +229,7 @@ a:hover {
 }
 .top .menu_right_item .cart-block .cartProductInfo {
   padding: 0 10px;
+  margin-right: auto;
 }
 .top .menu_right_item .cart-block .cartProductInfo h3 {
   margin: 5px 0px;

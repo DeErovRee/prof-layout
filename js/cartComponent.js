@@ -2,15 +2,15 @@ const cartItem = {
     props: ['img', 'cartItem'],
     template: `
         <div class="cart-item">
-            <img :src="cartItem.img" alt="Some img" class="cartProductImg">
+            <img :src="img" alt="Some img" class="cartProductImg">
             <div class="cartProductInfo">
                 
-                <h3>{{cartItem.product_name}}</h3>
-                <div><span class="color-text">{{cartItem.price}} $</span></div>
-                <div>Кол-во: {{cartItem.quantity}}</div>
+                <h3>{{ cartItem.product_name }}</h3>
+                <div><span class="color-text">{{ cartItem.price }} $</span></div>
+                <div>Кол-во: {{ cartItem.quantity }}</div>
             </div>
             <div class="right-block">
-                <div class="product-price">{{cartItem.quantity*cartItem.price}} $</div>
+                <div class="product-price">{{ cartItem.quantity * cartItem.price }} $</div>
                 <button class="buy-btn" @click="$parent.removeProduct(cartItem), $parent.cartEmpty(), $parent.cartStatusVisible()">X</button>
             </div>
         </div>
@@ -22,12 +22,13 @@ const cart = {
     data () {
         return {
             cart: [],
-            showCart: false,
             emptyCart: true,
+            showCart: false,
         }
     },
     methods: {
         addProduct(product){
+            console.log(this.cart)
             let find = this.cart.find(el => el.id_product === product.id_product)
             if (find) {
                 find.quantity++;
@@ -60,12 +61,12 @@ const cart = {
         }
     },
     template: `
-        <div class="cart-block" v-show="visibility">
+        <div class="cart-block" v-show="showCart">
             <h3 v-show="emptyCart">Корзина пуста</h3>
-            <cart-item v-for="item of cartItems"
+            <cart-item v-for="item of cart"
             :key="item.id_product"
-            :img="img"
-            :cart-item="item"></cart-item>
+            :img="item.img"
+            :cartItem="item"></cart-item>
         </div>
     `
 }
