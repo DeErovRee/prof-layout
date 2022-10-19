@@ -10,7 +10,7 @@ const cartItem = {
                 <div>Кол-во: {{ cartItem.quantity }}</div>
             </div>
             <div class="right-block">
-                <div class="product-price">{{ cartItem.quantity * cartItem.price }} $</div>
+                <div class="product-price">{{ (cartItem.quantity * cartItem.price).toFixed(2) }} $</div>
                 <button class="buy-btn" @click="$parent.removeProduct(cartItem), $parent.cartEmpty(), $root.$refs.cartstatus.cartStatusVisible()">X</button>
             </div>
         </div>
@@ -28,12 +28,15 @@ const cart = {
     },
     methods: {
         addProduct(product){
+            if (this.$root.$refs.cartstatus.acc === 99) {
+                return;
+            } else {
             let find = this.cart.find(el => el.id_product === product.id_product)
             if (find) {
                 find.quantity++;
             } else {
-                    this.cart.push(Object.assign({quantity:1}, product));
-            };
+                this.cart.push(Object.assign({quantity:1}, product));
+            }}
         },
         removeProduct(product){
             let remove = this.cart.find(el => el.id_product === product.id_product);
@@ -61,7 +64,7 @@ const cart = {
     },
     template: `
         <div class="cart-block" v-show="showCart">
-            <h3 v-show="emptyCart">Корзина пуста</h3>
+            <h3 class="cart-empty" v-show="emptyCart">Cart is empty</h3>
             <cart-item v-for="item of cart"
             :key="item.id_product"
             :img="item.img"

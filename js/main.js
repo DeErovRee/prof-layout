@@ -68,16 +68,16 @@ const app = new Vue({
         // }
     },
     mounted(){
-       this.getJson(`${API + this.catalogUrl}`)
-           .then(data => {
-               for(let el of data){
-                   this.products.push(el);
-                   this.filtered.push(el);
-               }
-           })
-           .then(error => {
-                this.error = true;
-           });
+    //    this.getJson(`${API + this.catalogUrl}`)
+    //        .then(data => {
+    //            for(let el of data){
+    //                this.products.push(el);
+    //                this.filtered.push(el);
+    //            }
+    //        })
+    //        .then(error => {
+    //             this.error = true;
+    //        });
         this.getJson(`getProducts.json`)
             .then(data => {
                 for(let el of data){

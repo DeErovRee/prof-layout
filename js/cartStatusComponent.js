@@ -2,24 +2,25 @@ const cartstatus = {
     data () {
         return {
             showCartStatus: false,
+            acc: 0,
         }
     },
     methods: {
         cartStatusVisible() {
-            let acc = 0;
+            this.acc = 0;
             this.$parent.$refs.cart.cart.forEach(el => {
-                acc += el.quantity;
+                this.acc += el.quantity
             });
-            if (acc >= 1) {
+            if (this.acc >= 1) {
                 this.showCartStatus = true;
-            } else if (acc < 1) {
+            } else if (this.acc < 1) {
                 this.showCartStatus = false;
             }
         },
     },
     template: `
     <div class="circle" v-show="showCartStatus">
-        <div>{{ cart.length }}</div>
+        <div>{{ this.acc }}</div>
     </div>
     `
 }

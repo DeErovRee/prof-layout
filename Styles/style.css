@@ -193,6 +193,8 @@ a:hover {
   color: #000;
 }
 .top .menu_right_item .circle {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
   color: #ffffff;
   text-align: center;
   border: 1px solid #F16D7F;
@@ -208,6 +210,10 @@ a:hover {
 .top .menu_right_item .btn-cart {
   background-color: inherit;
   border: none;
+}
+.top .menu_right_item .cart-empty {
+  text-align: center;
+  width: 120px;
 }
 .top .menu_right_item .cart-block {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.62);

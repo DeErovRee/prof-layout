@@ -4,7 +4,7 @@ const product = {
         <article class="card">
             <div class="img">
                 <div class="hover">
-                    <button class="button_add-to-cart" @click="$root.$refs.cart.addProduct(product), $root.$refs.cart.cartEmpty(), $root.$refs.cartstatus.cartStatusVisible()">
+                    <button class="button_add-to-cart" @click="$root.$refs.cart.addProduct(product), $root.$refs.cartstatus.cartStatusVisible(), $root.$refs.cart.cartEmpty()">
                         <img class="cart_img" src="images/cart.svg" alt="">
                         Add to cart
                     </button>
@@ -29,13 +29,13 @@ const products = {
         }
     },
     mounted () {
-        this.$parent.getJson(`${API + this.catalogUrl}`)
-            .then(data => {
-                for (let el of data) {
-                    this.products.push(el);
-                    this.filtered.push(el);
-                }
-            })
+        // this.$parent.getJson(`${API + this.catalogUrl}`)
+        //     .then(data => {
+        //         for (let el of data) {
+        //             this.products.push(el);
+        //             this.filtered.push(el);
+        //         }
+        //     })
         
         this.$parent.getJson(`../getProducts.json`)
             .then(data => {
@@ -47,13 +47,13 @@ const products = {
     },
     methods: {
         filter(val){
-            const regexp = new RegExp(val, 'i');
+            const regexp = new RegExp(val.trim(), 'i');
             this.filtered = this.products.filter(product => regexp.test(product.product_name));
         },
     },
     template: `
         <div class="products">
-            <product v-for="item of products"
+            <product v-for="item of filtered"
             :key="item.id_product"
             :product="item"
             :img="item.img"></product>
