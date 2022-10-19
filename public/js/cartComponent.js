@@ -26,16 +26,35 @@ const cart = {
             showCart: false,
         }
     },
+    mounted() {
+        this.$parent.getJson('/api/cart')
+            .then(data => {
+                for (let item of data) {
+                    this.$data.cartItem.push(item)
+                }
+            })
+    },
     methods: {
         addProduct(product){
             if (this.$root.$refs.cartstatus.acc === 99) {
                 return;
             } else {
-            let find = this.cart.find(el => el.id_product === product.id_product)
-            if (find) {
-                find.quantity++;
-            } else {
-                this.cart.push(Object.assign({quantity:1}, product));
+                let find = this.cart.find(el => el.id_product === product.id_product)
+                if (find) {
+                    this.$parent.putJson(`/api/cart/${find.id_product}`, {quantity: 1})
+                        .then(data => {
+                            if (data.result === 1) {
+                                find.quantity++;
+                            }
+                        })
+                } else {
+                    const prod = Object.assign({quantity:1}, product);
+                    this.$parent.postJson('/api/cart/', prod)
+                        .then(data => {
+                            if(data.result === 1) {
+                                this.cartItems.push(prod)
+                            }
+                        })
             }}
         },
         removeProduct(product){

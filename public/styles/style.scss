@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Lato';
-    src: url('/fonts/lato/lato-regular-webfont.woff2') format('woff2'),
-         url('/fonts/lato/lato-regular-webfont.woff') format('woff'),
-         url('/fonts/lato/lato-regular.ttf') format('ttf');
+    src: url('/public/fonts/lato/lato-regular-webfont.woff2') format('woff2'),
+         url('/public/fonts/lato/lato-regular-webfont.woff') format('woff'),
+         url('/public/fonts/lato/lato-regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 
@@ -292,8 +292,6 @@ a:hover {
                         margin-left: 30px;
                         align-self: center;
                         text-align: right;
-                    }
-                    .product-price{
                     }
                     .product-desc{
                         max-width: 150px;

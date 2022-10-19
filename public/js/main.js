@@ -24,6 +24,32 @@ const app = new Vue({
                     this.error = true
                 })
         },
+        putJson(url, data){
+            return fetch(url, {
+                method: 'PUT',
+                headers: {
+                    "Content-Type": "Application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(result => result.json)
+            .catch(error => {
+                this.error = true
+            })
+        },
+        postJson(url, data){
+            return fetch(url, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "Application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(result => result.json)
+            .catch(error => {
+                this.error = true
+            })
+        }
 
         // filter(){
         //     const regexp = new RegExp(this.userSearch, 'i');
@@ -78,7 +104,7 @@ const app = new Vue({
     //        .then(error => {
     //             this.error = true;
     //        });
-        this.getJson(`getProducts.json`)
+        this.getJson(`/server/db/getProducts.json`)
             .then(data => {
                 for(let el of data){
                     this.products.push(el);

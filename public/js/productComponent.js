@@ -37,7 +37,7 @@ const products = {
         //         }
         //     })
         
-        this.$parent.getJson(`../getProducts.json`)
+        this.$parent.getJson(`/api/products`)
             .then(data => {
                 for (let el of data) {
                     this.products.push(el);

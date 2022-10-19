@@ -9,7 +9,7 @@ const search = {
             @submit.prevent='$root.$refs.product.filter(userSearch)'>
                 <input type="text" class="search-field" v-model="userSearch">
                 <button class="btn-search" type="submit">
-                    <img src="../images/search.svg"></i>
+                    <img src="/public/images/search.svg"></i>
                 </button>
             </form>
     `
