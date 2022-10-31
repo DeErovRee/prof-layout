@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Catalog</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div id="app">
@@ -116,18 +116,11 @@
                             </li>
                             <li class="menu_right_item">
                                 <button class="btn-cart" type="button" @click="$root.$refs.cart.cartVisible()">
-                                    <cartstatus ref="cartstatus"></cartstatus>
+                                    <!-- <cartstatus ref="cartstatus"></cartstatus> -->
                                     <img src="images/cart.svg" alt="">
                                 </button>
                                 <cart class="cart-block" ref="cart"></cart>
                             </li>
-                            
-                            <!-- <li class="menu_right_item">
-                                <a href="/cart.html">
-                                    <div class="circle">5</div>
-                                    <img src="images/cart.svg" alt="">
-                                </a>
-                            </li> -->
                         </ul>
                     </div>
                 </nav>
@@ -383,9 +376,9 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
         
         <script src="./js/cartStatusComponent.js"></script>
-        <script src="./js/cartComponent.js"></script>
-        <script src="./js/searchComponent.js"></script>
-        <script src="./js/productComponent.js"></script>
+        <script src="./js/CartComponent.js"></script>
+        <script src="./js/FilterComp.js"></script>
+        <script src="./js/ProductComponent.js"></script>
         <script src="./js/main.js"></script>
 </body>
 </html>
