@@ -6,26 +6,21 @@ Vue.component('cartstatus', {
         }
     },
     mounted(){
-        this.$parent.getJson(`/api/cart`)
-            .then(data => {
-                for (let item of data.contents) {
-                    this.$data.acc += item.quantity
-                }
-            })
     },
     methods: {
         cartStatusVisible() {
             this.$parent.getJson(`/api/cart`)
             .then(data => {
+                this.acc = 0;
                 for (let item of data.contents) {
-                    this.$data.acc = item.quantity
+                    this.acc += item.quantity
+                }
+                if (this.acc > 0) {
+                    this.showCartStatus = true;
+                } else if (this.acc <= 0) {
+                    this.showCartStatus = false;
                 }
             })
-            .then(data => {if (this.acc >= 1) {
-                this.showCartStatus = true;
-            } else if (this.acc < 1) {
-                this.showCartStatus = false;
-            }})
         },
     },
     template: `
